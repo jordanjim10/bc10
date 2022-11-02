@@ -16,7 +16,8 @@ public class RBO_001VB extends SeleniumTestBase {
     public void prueba(){
         rumbo = new RumboHomePage(DriverFactory.getDriver());
         rumbo.navigateTo(BASE_URL_AUT);
-
+        rumbo.acceptarCookies();
+        rumbo.miRumbo();
     }
 
 
