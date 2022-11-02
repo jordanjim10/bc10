@@ -27,9 +27,11 @@ public class SeleniumTestBase {
         driver = driverFactory.inicializarDriver(browserName);
     }
 
-   /* @AfterEach
-    void close(){
+
+    @AfterEach
+    void close() {
+
         driver.quit();
-    }*/
+    }
 
 }
