@@ -1,11 +1,18 @@
 package framework.engine.selenium;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import groovyjarjarasm.asm.ByteVector;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
+import java.io.IOException;
+import java.time.Duration;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 public class SeleniumWrapper {
 
@@ -66,10 +73,56 @@ public class SeleniumWrapper {
 
     public void navigateTo(String url){
         driver.navigate().to(url);
+
+    }
+    public void changeTab(){
+        driver.getWindowHandles().forEach(tab->driver.switchTo().window(tab));
+    }
+
+
+    public void waitClick(By locator){
+        WebDriverWait waitme = new WebDriverWait(driver, Duration.ofSeconds(20));
+        waitme.until(ExpectedConditions.elementToBeClickable(locator));
+    }
+
+    public void waitDisplayclick(By locator){
+        WebDriverWait waitD = new WebDriverWait(driver,Duration.ofSeconds(10));
+        waitD.until(ExpectedConditions.visibilityOfElementLocated(locator)).click();
+    }
+
+    public void scrollDown(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,800)","");
+    }
+
+    public void scrollup(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,-100)","");
+    }
+
+    public void summit (By locator){
+        driver.findElement(locator).click();
+    }
+
+    public void screenShotP (String FileName) throws IOException {
+        File File = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(File, new File("src\\test\\java\\aut\\funcional\\testcases\\hoteles\\imagenes\\" + FileName + ".jpeg"));
+    }
+
+    public void implicitwait(){
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    }
+
+    public void actionsS(By locator){
+        Actions action = new Actions(driver);
+        WebElement element = driver.findElement(locator);
+        action.moveToElement(element).click().perform();
     }
 
     public String getUrlTitle(){
         return driver.getTitle();
     }
+
+
 
 }
