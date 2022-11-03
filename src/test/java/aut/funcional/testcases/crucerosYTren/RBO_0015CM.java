@@ -23,7 +23,7 @@ public class RBO_0015CM extends SeleniumTestBase {
         rumbo.cotizacionCrucero();
         rumbo.finalTest15();
         Assertions.assertEquals("No te preocupes, ¡no se realizará ningún cargo todavía!", rumbo.alertaFinal());
-        rumbo.screenShotP("Test15");
+
 
 
     }

@@ -118,7 +118,8 @@ public class RumboHomePageV extends SeleniumWrapper {
         click(btnCookiesLoc);
     }
     public void pagarViaje2(){
-        waitDisplayclick(tarifaSinDsctoLoc);
+        waitClick(tarifaSinDsctoLoc);
+        click(tarifaSinDsctoLoc);
         waitDisplayclick(btnSiguiente2Loc);
         waitDisplayclick(checkTerminosLoc);
 
@@ -156,7 +157,7 @@ public class RumboHomePageV extends SeleniumWrapper {
         click(precioNormalLoc);
     }
     public void opcionClassic(){
-        waitDisplayclick(btnOpcionClassic);
+        actionsS(btnOpcionClassic);
     }
     public void login () {
         waitDisplayclick(loginCorreoLoc);
