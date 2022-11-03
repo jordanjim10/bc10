@@ -4,9 +4,9 @@ import framework.engine.selenium.SeleniumWrapper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class RumboHomePage extends SeleniumWrapper {
+public class RumboHomePageV extends SeleniumWrapper {
 
-    public RumboHomePage(WebDriver driver) {
+    public RumboHomePageV(WebDriver driver) {
         super(driver);
     }
 
