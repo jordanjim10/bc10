@@ -1,16 +1,23 @@
 package aut.bdd.steps;
 
+import aut.bdd.pages.CucumberHomePage;
+import framework.engine.selenium.DriverFactory;
 import io.cucumber.java8.En;
 import org.junit.jupiter.api.Assertions;
 
 public class CucumberSteps implements En {
 
+
+    // Solicitamos las pages no isntanciadas
+    CucumberHomePage cucumberHomePage;
     //Constructor ⇾ le vamos a pasar las pages con las que interectua
 
-    public CucumberSteps() {
+    public CucumberSteps(CucumberHomePage cucumberHomePage) {
+        this.cucumberHomePage = cucumberHomePage;
+
         When("the Maker starts a game", () -> {
-            // Write code here that turns the phrase above into concrete actions
-            Assertions.assertTrue(true);
+            DriverFactory.initDriver();
+            cucumberHomePage.irAHomePage();
         });
 
        Then("the Maker waits for a Breaker to join", () -> {
