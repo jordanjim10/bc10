@@ -23,6 +23,6 @@ public class RBO_0010HM extends SeleniumTestBase {
         rumbo.botonBuscarAlo();
 
         //Cambio de sitio bajo esas condiciones y condiciones borradas
-        rumbo.screenShotP("cambio_de_sitio_inspirame_rumbo");
+        rumbo.screenShotP("cambio_de_sitio_inspirame_rumbo010");
     }
 }

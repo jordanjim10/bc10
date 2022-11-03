@@ -24,7 +24,7 @@ public class RBO_009HM extends SeleniumTestBase {
         rumbo.hotelesConespa();
         rumbo.scrollDown();
         rumbo.agregarOtraPersona();
-        rumbo.screenShotP("Habitacion_con_desayuno");
+        rumbo.screenShotP("Habitacion_con_desayuno009");
         Assertions.assertEquals("Alojamiento y desayuno",rumbo.detalleviaje());
 
     }

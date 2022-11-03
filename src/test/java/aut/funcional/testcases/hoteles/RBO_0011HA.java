@@ -26,7 +26,7 @@ public class RBO_0011HA extends SeleniumTestBase {
         rumbo.changeTab();
         rumbo.soloAlojamiento();
         rumbo.termycondic();
-        rumbo.screenShotP("terminos_y_condiciones");
+        rumbo.screenShotP("terminos_y_condiciones011");
 
     }
 }

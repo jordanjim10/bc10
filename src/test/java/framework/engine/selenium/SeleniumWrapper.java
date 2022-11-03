@@ -106,7 +106,7 @@ public class SeleniumWrapper {
 
     public void screenShotP (String FileName) throws IOException {
         File File = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(File, new File("src\\test\\java\\aut\\funcional\\testcases\\hoteles\\imagenes\\" + FileName + ".jpeg"));
+        FileUtils.copyFile(File, new File("src\\test\\java\\aut\\funcional\\testcases\\imagenes\\" + FileName + ".jpeg"));
     }
 
     public void implicitwait(){
