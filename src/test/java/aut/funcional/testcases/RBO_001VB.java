@@ -17,6 +17,7 @@ public class RBO_001VB extends SeleniumTestBase {
     public void prueba(){
         rumbo = new RumboHomePage(DriverFactory.getDriver());
         rumbo.navigateTo(BASE_URL_AUT);
+
         rumbo.acceptCookie();
         rumbo.clickMenuVuelo();
         rumbo.scrollDown();
@@ -31,7 +32,6 @@ public class RBO_001VB extends SeleniumTestBase {
         //Assertions.assertEquals("jue. 10 de nov. de 2022",rumbo.validacionIda());
         //Assertions.assertEquals("sáb. 12 de nov. de 2022",rumbo.fechaVuelta());
         Assertions.assertEquals("80,99 €",rumbo.txtvueloEco());
-
 
 
 
