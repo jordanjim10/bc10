@@ -1,21 +1,23 @@
-package aut.funcional.testcases;
+package aut.funcional.testcases.vuelos;
 
-import aut.funcional.pages.RumboHomePage;
+import aut.funcional.pages.RumboHomePageV;
 import framework.engine.selenium.DriverFactory;
 import framework.engine.selenium.SeleniumTestBase;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import java.io.IOException;
 
 import static framework.engine.utils.Constants.BASE_URL_AUT;
 
 public class RBO_001VB extends SeleniumTestBase {
 
 
-    RumboHomePage rumbo;
+    RumboHomePageV rumbo;
 
     @Test
-    public void prueba(){
-        rumbo = new RumboHomePage(DriverFactory.getDriver());
+    public void prueba() throws IOException {
+        rumbo = new RumboHomePageV(DriverFactory.getDriver());
         rumbo.navigateTo(BASE_URL_AUT);
 
         rumbo.acceptCookie();
@@ -28,10 +30,10 @@ public class RBO_001VB extends SeleniumTestBase {
         rumbo.changeTab();
         rumbo.vueloBarato();
         //rumbo.vueloPlusPer();
-       // rumbo.serviciosFlexibles();
+       //rumbo.serviciosFlexibles();
         //Assertions.assertEquals("jue. 10 de nov. de 2022",rumbo.validacionIda());
         //Assertions.assertEquals("sáb. 12 de nov. de 2022",rumbo.fechaVuelta());
-        Assertions.assertEquals("80,99 €",rumbo.txtvueloEco());
+        rumbo.screenShotP("Test1");
 
 
 
