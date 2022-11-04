@@ -37,8 +37,8 @@ public class RumboHomePageH extends SeleniumWrapper {
     By aplicarV = By.xpath("//button[@class='sc-fEOsli jzgnBo']");
     //By box1 = By.xpath("//div[@class='sc-GVOUr elqapB openx-ui-card-content']");
     //alternativa box1
-    By box1 = By.xpath("//div[@class='sc-GVOUr dECEAl openx-ui-card-content']//div[@class='openx-ui-card-details-right']");
-    By primeraCartaH = By.xpath("//span[normalize-space()='Walnut Shell Hotel']");
+    By box1 = By.xpath("//div[@class='sc-GVOUr elqapB openx-ui-card-content']");
+    By primeraCartaH = By.xpath("//body/div[@id='__next']/main[@class='sc-cLFqLo tkAxM']/div[@class='sc-dkdnUF bBaubr list-container']/div[@class='sc-WCkqM dyEyUY']/div[@class='sc-kgUAyh jOSWat']/div[1]/a[1]/div[2]");
     //
 
     By comentariosH = By.xpath("//span[normalize-space()='Comentarios']");
@@ -63,7 +63,9 @@ public class RumboHomePageH extends SeleniumWrapper {
     By fechaFlexible = By.xpath("//button[normalize-space()='Fechas flexibles']");
     By fechadesplegable = By.xpath("//label[normalize-space()='Fecha de entrada']");
     By flex7a10 = By.xpath("//button[normalize-space()='7-10 noches']");
-    By flexdic22 = By.xpath("//section[contains(@class,'display-11ni3xq-Overlay-styled')]//button[4]//*[name()='svg']");
+    //variable segun dia de consulta
+    By flexdic22 = By.xpath("//button[@class='display-aycxxj-MonthsRangePicker-styled-MonthsRangePicker-styled']");
+
     By btnEstrellas = By.xpath("//div[@id='container_full_width']//div[3]//div[1]//*[name()='svg']");
     By checkBox5estrellas = By.xpath("//body/div[@class='sc-dmRaPn goosly custom-overlay-portal ']/div[@class='sc-kgflAQ jwIVQL']/div[1]/div[1]//*[name()='svg'][3]/*[name()='path'][1]");
     By aplicarEstrellas = By.xpath("//button[@class='sc-fEOsli jzgnBo']");
@@ -72,9 +74,26 @@ public class RumboHomePageH extends SeleniumWrapper {
     By primeraOpcionsierra = By.xpath("//span[normalize-space()='Hospes Palacio De Los Patos']");
     By soloAlojamientos = By.id("check_svg__filled");
     By terminosycondiciones = By.xpath("//span[contains(@data-test,'privacyPolicy-check')]");
+    By ideasDeDestinos = By.xpath("//div[contains(@class,'display-16pcc9e-HubStickyAdvertProvider-HubStickyAdvertProvider e1re16mz0')]//div[contains(@class,'hub-container mobile e1gf7ux30 display-jkk13v-Container-layouts-HubRow eg3h3jz0')]//div[1]//div[1]//div[3]//button[1]//*[name()='svg']");
+    By ideasMadrid = By.xpath("//a[@title='Hoteles en Madrid']");
+    By madridPrimer = By.xpath("//body/div[@class='container page-content']/div[@class='top-content']/div[@id='best-prices']/div[@id='best-prices-results']/article[1]/div[1]/div[1]");
+    By fechaMadrid = By.xpath("//div[normalize-space()='Fecha de entrada']");
+    By fechaMadrid30 = By.xpath("//div[@class='monthContainer monthContainerSecond']//div[@class='monthDay monthDayEnabled'][normalize-space()='27']");
+    By fechaMadrid31 = By.xpath("//div[normalize-space()='31']");
+    By buscarMadrid = By.xpath("//div[@class='btn btn-cta btn-block lmn-sw-submitHotel']");
+    By verOtrosHoteles = By.xpath("(//span[@class='BackButton___StyledLink-sc-7wrjfw-3 hfSQhF'])[1]");
+    By todosLosFiltros = By.xpath("//span[normalize-space()='Todos los filtros']");
+    By topSecret = By.xpath("//label[@id='ck_label_tsh']//div[@class='styled__Text-sc-ncpwe6-1 dKelni']");
+    By applyfiltros = By.xpath("//button[@class='sc-jIAOiI gCrpuT']");
+    By variacion5estre = By.xpath("//body/div[@class='sc-bhVIhj ioZiXt custom-overlay-portal ']/div[@class='sc-eGAhfa dMYIUp']/div[1]");
+    By apliestre = By.xpath("//button[@class='sc-jIAOiI gCrpuT']");
+    //variable por dia
+    By reservatopSecret = By.xpath("(//span[contains(text(),'Hotel 5 estrellas situado en un palacio del siglo ')])[1]");
+    By habitaciontopS = By.xpath("//body//div[@id='__next']//div[@class='BrandedPageLayout___StyledDiv-sc-1x8t0fu-2 iGBmhN']//div//div//div//div//div[1]//div[2]//div[1]//div[1]//div[1]//ul[1]");
 
 
-    // metodos generales
+
+   // metodos generales
     public void acceptCookie() {
         waitClick(btnCookiesLoc);
         click(btnCookiesLoc);
@@ -205,12 +224,52 @@ public class RumboHomePageH extends SeleniumWrapper {
         waitDisplayclick(terminosycondiciones);
     }
 
+    //Test Case 012
+
+    public void ideashotelesEsp(){
+        actionsS(ideasDeDestinos);
+        waitDisplayclick(ideasMadrid);
+        scrollDown();
+
+    }
+
+    public void clickhoteles(){
+        scrollDown();
+        actionsS(madridPrimer);
+    }
+
+    public void fechasyViajeros(){
+        click(fechaMadrid);
+        click(fechaMadrid30);
+        click(fechaMadrid31);
+        click(buscarMadrid);
 
 
+    }
+
+    public void otrovuelos(){
+        waitDisplayclick(verOtrosHoteles);
+    }
 
 
+    public void filtroS(){
+        actionsS(todosLosFiltros);
+        click(topSecret);
+        click(applyfiltros);
+    }
 
+    public void estrellas(){
+        waitDisplayclick(btnEstrellas);
+        waitDisplayclick(variacion5estre);
+        waitDisplayclick(apliestre);
 
+    }
+
+    public void reservaHoToS(){
+        waitClick(reservatopSecret);
+        changeTab();
+
+    }
 
 
 }

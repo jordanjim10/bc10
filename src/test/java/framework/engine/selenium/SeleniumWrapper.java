@@ -15,32 +15,33 @@ public class SeleniumWrapper {
     private final WebDriver driver;
 
     //Constructor Base
-    public SeleniumWrapper(WebDriver driver){
+    public SeleniumWrapper(WebDriver driver) {
         this.driver = driver;
     }
 
     //Wrappers Selenium
-    public WebElement findElement(By locator){
+    public WebElement findElement(By locator) {
         return driver.findElement(locator);
     }
 
-    public List<WebElement> findElements (By locator){
+    public List<WebElement> findElements(By locator) {
         return driver.findElements(locator);
     }
 
-    public String getText (By locator){
+    public String getText(By locator) {
         return driver.findElement(locator).getText();
     }
 
-    public void write(String inputText, By locator){
+    public void write(String inputText, By locator) {
         isDisplayed(locator);
         driver.findElement(locator).sendKeys(inputText);
     }
-    public void sendKeys(Keys key, By locator){
+
+    public void sendKeys(Keys key, By locator) {
         driver.findElement(locator).sendKeys(key);
     }
 
-    public void click(By locator){
+    public void click(By locator) {
         driver.findElement(locator).click();
     }
 
@@ -51,6 +52,7 @@ public class SeleniumWrapper {
             return false;
         }
     }
+
     public Boolean isEnabled(By locator) {
         try {
             return driver.findElement(locator).isEnabled();
@@ -67,58 +69,57 @@ public class SeleniumWrapper {
         }
     }
 
-    public void navigateTo(String url){
+    public void navigateTo(String url) {
         driver.navigate().to(url);
 
     }
-    public void changeTab(){
-        driver.getWindowHandles().forEach(tab->driver.switchTo().window(tab));
+
+    public void changeTab() {
+        driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
     }
 
 
-    public void waitClick(By locator){
+    public void waitClick(By locator) {
         WebDriverWait waitme = new WebDriverWait(driver, Duration.ofSeconds(20));
         waitme.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
-    public void waitDisplayclick(By locator){
-        WebDriverWait waitD = new WebDriverWait(driver,Duration.ofSeconds(15));
+    public void waitDisplayclick(By locator) {
+        WebDriverWait waitD = new WebDriverWait(driver, Duration.ofSeconds(15));
         waitD.until(ExpectedConditions.visibilityOfElementLocated(locator)).click();
     }
 
-    public void scrollDown(){
+    public void scrollDown() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,800)","");
+        js.executeScript("window.scrollBy(0,800)", "");
     }
 
-    public void scrollup(){
+    public void scrollup() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,-100)","");
+        js.executeScript("window.scrollBy(0,-100)", "");
     }
 
-    public void summit (By locator){
+    public void summit(By locator) {
         driver.findElement(locator).click();
     }
 
-    public void screenShotP (String FileName) throws IOException {
-        File File = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+    public void screenShotP(String FileName) throws IOException {
+        File File = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(File, new File("src\\test\\java\\aut\\funcional\\testcases\\imagenes\\" + FileName + ".jpeg"));
     }
 
-    public void implicitwait(){
+    public void implicitwait() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
-    public void actionsS(By locator){
+    public void actionsS(By locator) {
         Actions action = new Actions(driver);
         WebElement element = driver.findElement(locator);
         action.moveToElement(element).click().perform();
     }
 
-    public String getUrlTitle(){
+    public String getUrlTitle() {
         return driver.getTitle();
     }
-
-
 
 }
