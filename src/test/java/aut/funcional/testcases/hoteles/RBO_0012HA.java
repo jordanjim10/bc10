@@ -24,8 +24,9 @@ public class RBO_0012HA extends SeleniumTestBase {
         rumbo.ideashotelesEsp();
         rumbo.clickhoteles();
         rumbo.fechasyViajeros();
-        rumbo.filtroSecreto();
-        rumbo.estrellas();
+        rumbo.otrovuelos();
+        rumbo.filtroS();
+        //rumbo.estrellas();
         rumbo.reservaHoToS();
         rumbo.screenShotP("Reserva_top_secret012");
 

@@ -33,10 +33,27 @@ public class RumboHomePageC  extends SeleniumWrapper {
     By crucer27Dic = By.xpath("(//div[@class='crs-card-departure-date'])[14]");
     By camaroteExterior = By.xpath("(//button[@class='crs-btn crs-btn--block crs-btn--cabin ng-star-inserted'])[1]");
     By solicitarPresupuesto = By.xpath("//button[@class='crs-btn crs-btn--cta crs-btn--contain crs-btn--block ng-star-inserted']");
-    By nombreC = By.xpath("(//input[@id='firstname_1667482023299'])[1]");
-    By apellidoC =  By.xpath("(//input[@id='lastname_1667482023299'])[1]");
-    By telefonoC = By.xpath("(//input[@placeholder='Inserta tu número de teléfono'])[1]");
-    By emailC    =  By.xpath("(//input[@id='email_1667482023299'])[1]");
+    // Elementos dinamicos xpath completos
+    By nombreC = By.xpath("/html/body/crs-app/crs-advanced-outlet/crs-cho-page/crs-page-base/div/main/div/section/crs-cho-booking-method/section/section[1]/div[1]/crs-customer-info-form/form/div[2]/div[1]/div/input");
+    By apellidoC =  By.xpath("/html/body/crs-app/crs-advanced-outlet/crs-cho-page/crs-page-base/div/main/div/section/crs-cho-booking-method/section/section[1]/div[1]/crs-customer-info-form/form/div[2]/div[2]/div/input");
+    By telefonoC = By.xpath("/html/body/crs-app/crs-advanced-outlet/crs-cho-page/crs-page-base/div/main/div/section/crs-cho-booking-method/section/section[1]/div[1]/crs-customer-info-form/form/div[3]/div[1]/div/intltelinput/div/input");
+    By emailC    =  By.xpath("/html/body/crs-app/crs-advanced-outlet/crs-cho-page/crs-page-base/div/main/div/section/crs-cho-booking-method/section/section[1]/div[1]/crs-customer-info-form/form/div[3]/div[2]/div/input");
+
+    By comfirmar = By.xpath("//button[@class='btn btn-cta btn-lg btn-block']");
+    By CiudadesC = By.xpath("//aside[@role='complementary']//span[@class='crs_value'][contains(text(),'Barcelona - Palma de Mallorca - Palermo - Civitave')]");
+    //Trenes
+    By botonnavTrenes = By.xpath("(//a[@title='Trenes'][normalize-space()='Trenes'])[1]");
+    By origenTrenes = By.xpath("//label[normalize-space()='Origen']");
+    By opcionOrigenTrenes = By.xpath("(//div[contains(@role,'option')])[1]");
+    By destinoTrenes = By.xpath("//label[normalize-space()='Destino']");
+    By opcionDestino = By.xpath("(//div[@role='option'])[1]");
+    By pasajerosTrenes = By.xpath("(//button[contains(@class,'display-vu9q0w-Dropdown-styled')])[1]");
+    By agregarPasajerosT = By.xpath("//button[@aria-label='Aumentar el número de adultos']//*[name()='svg']");
+    By anadirninoTrenes = By.xpath("//button[@aria-label='Aumentar el número de niños']");
+    By anadirBebe = By.xpath("//li[normalize-space()='Bebé, 0-11 meses']");
+    By busquedaTrenes = By.xpath("//button[normalize-space()='Buscar']");
+    By noEncontradoT = By.xpath("(//div[@class='Container__StyledContainer-sc-sb5e2u-0 fzfA-dR NoResultsPanel__Title-sc-148mow5-2 ejrcDf'])[1]");
+
 
     //Metodos Generales
 
@@ -103,8 +120,40 @@ public class RumboHomePageC  extends SeleniumWrapper {
         click(solicitarPresupuesto);
     }
 
-    public void datosPersonales(){
+    public void rellenarCampos(){
+        waitDisplayclick(nombreC);
+        write("Daniel",nombreC);
+        write("Perez",apellidoC);
+        write("96632858",telefonoC);
+        write("Hola@Hotmail.com",emailC);
+        waitDisplayclick(comfirmar);
+    }
+
+    public String textociudades(){
+        return getText(CiudadesC);
+    }
+
+
+    //Test case 018 Trenes
+
+    public void trenesBtn(){
+        click(botonnavTrenes);
+    }
+
+    public void busquedaTrenes(){
+        click(origenTrenes);
+        click(opcionOrigenTrenes);
+        click(destinoTrenes);
+        click(opcionDestino);
+        click(pasajerosTrenes);
+        click(agregarPasajerosT);
+        click(anadirninoTrenes);
+        click(anadirBebe);
+        click(busquedaTrenes);
 
     }
 
+    public String noEncontradoTrenes(){
+        return getText(noEncontradoT);
+    }
 }

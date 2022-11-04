@@ -81,13 +81,14 @@ public class RumboHomePageH extends SeleniumWrapper {
     By fechaMadrid30 = By.xpath("//div[@class='monthContainer monthContainerSecond']//div[@class='monthDay monthDayEnabled'][normalize-space()='27']");
     By fechaMadrid31 = By.xpath("//div[normalize-space()='31']");
     By buscarMadrid = By.xpath("//div[@class='btn btn-cta btn-block lmn-sw-submitHotel']");
-    By verOtrosHoteles = By.xpath("//span[@class='BackButton___StyledLink-sc-7wrjfw-3 juKeJS']");
+    By verOtrosHoteles = By.xpath("(//span[@class='BackButton___StyledLink-sc-7wrjfw-3 hfSQhF'])[1]");
     By todosLosFiltros = By.xpath("//span[normalize-space()='Todos los filtros']");
     By topSecret = By.xpath("//label[@id='ck_label_tsh']//div[@class='styled__Text-sc-ncpwe6-1 dKelni']");
     By applyfiltros = By.xpath("//button[@class='sc-jIAOiI gCrpuT']");
     By variacion5estre = By.xpath("//body/div[@class='sc-bhVIhj ioZiXt custom-overlay-portal ']/div[@class='sc-eGAhfa dMYIUp']/div[1]");
     By apliestre = By.xpath("//button[@class='sc-jIAOiI gCrpuT']");
-    By reservatopSecret = By.xpath("//span[contains(text(),'Moderno hotel de 5 estrellas cerca del Museo del P')]");
+    //variable por dia
+    By reservatopSecret = By.xpath("(//span[contains(text(),'Hotel 5 estrellas situado en un palacio del siglo ')])[1]");
     By habitaciontopS = By.xpath("//body//div[@id='__next']//div[@class='BrandedPageLayout___StyledDiv-sc-1x8t0fu-2 iGBmhN']//div//div//div//div//div[1]//div[2]//div[1]//div[1]//div[1]//ul[1]");
 
 
@@ -242,16 +243,19 @@ public class RumboHomePageH extends SeleniumWrapper {
         click(fechaMadrid30);
         click(fechaMadrid31);
         click(buscarMadrid);
-        waitDisplayclick(verOtrosHoteles);
+
 
     }
 
-    public void filtroSecreto(){
-        click(todosLosFiltros);
-        //waitDisplayclick(topSecret);
+    public void otrovuelos(){
+        waitDisplayclick(verOtrosHoteles);
+    }
+
+
+    public void filtroS(){
+        actionsS(todosLosFiltros);
         click(topSecret);
         click(applyfiltros);
-
     }
 
     public void estrellas(){
@@ -262,7 +266,7 @@ public class RumboHomePageH extends SeleniumWrapper {
     }
 
     public void reservaHoToS(){
-        waitDisplayclick(reservatopSecret);
+        waitClick(reservatopSecret);
         changeTab();
 
     }
