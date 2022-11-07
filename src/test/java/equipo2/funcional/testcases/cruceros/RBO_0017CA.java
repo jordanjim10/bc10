@@ -19,6 +19,7 @@ public class RBO_0017CA extends SeleniumTestBase {
         rumbo.cotizacionCrucero17();
         rumbo.finalCrucero17();
         rumbo.clicksFinal17();
+        rumbo.screenShotP("Test17");
     }
 
 }

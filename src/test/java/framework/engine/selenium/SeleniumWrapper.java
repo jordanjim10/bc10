@@ -73,11 +73,8 @@ public class SeleniumWrapper {
         driver.navigate().to(url);
 
     }
-<<<<<<< HEAD
-=======
-
     // Metodos Grupo 2 agregados
->>>>>>> b932ca32982a9580d8df9027dce8d4ccb27f6430
+
     public void changeTab() {
         driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
     }
@@ -109,7 +106,7 @@ public class SeleniumWrapper {
 
     public void screenShotP(String FileName) throws IOException {
         File File = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(File, new File("src\\test\\java\\aut\\equipo2.funcional\\testcases\\imagenes\\" + FileName + ".jpeg"));
+        FileUtils.copyFile(File, new File("src\\test\\java\\equipo2.funcional\\testcases\\imagenes\\" + FileName + ".jpeg"));
     }
 
     public void implicitwait() {

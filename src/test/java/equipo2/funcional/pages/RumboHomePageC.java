@@ -249,7 +249,7 @@ import java.io.IOException;
             write("fiordos noruegos", imputCruceroLoc);
             waitClick(opcionFiordosLoc);
             actionsS(opcionFiordosLoc);
-           // waitDisplayclick(opcionFiordosLoc);
+           //waitDisplayclick(opcionFiordosLoc);
             waitDisplayclick(btnMasPasajerosLoc);
             waitClick(masPasajerosLoc);
             click(masPasajerosLoc);
@@ -284,7 +284,7 @@ import java.io.IOException;
             actionsS(checkVip17Loc);
             waitClick(btnContinuarLoc);
             click(btnContinuarLoc);
-            screenShotP("Test17");
+
 
         }
     }
