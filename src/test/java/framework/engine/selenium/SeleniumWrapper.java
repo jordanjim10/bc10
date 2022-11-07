@@ -73,7 +73,6 @@ public class SeleniumWrapper {
         driver.navigate().to(url);
 
     }
-
     public void changeTab() {
         driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
     }
