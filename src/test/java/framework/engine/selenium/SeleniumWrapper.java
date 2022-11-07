@@ -74,6 +74,7 @@ public class SeleniumWrapper {
 
     }
 
+    // Metodos Grupo 2
     public void changeTab() {
         driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
     }
