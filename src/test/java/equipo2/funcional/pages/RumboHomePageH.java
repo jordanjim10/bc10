@@ -30,17 +30,17 @@ public class RumboHomePageH extends SeleniumWrapper {
     By btnCancelacionG = By.xpath("//div[contains(text(),'Cancelación gratuita')]");
     By wifiGratis = By.xpath("//div[contains(text(),'Wifi gratis')]");
     By valoracionH = By.xpath("//span[normalize-space()='Valoración']");
-    By vExcelente = By.xpath("//body/div[contains(@class,'sc-dmRaPn goosly custom-overlay-portal')]/div[@class='sc-kgflAQ jwIVQL']/div[1]//*[name()='svg']//*[name()='rect' and contains(@width,'20')]");
-    By aplicarV = By.xpath("//button[@class='sc-fEOsli jzgnBo']");
+    By vExcelente = By.xpath("//body/div[@class='sc-dIouRR khZjd custom-overlay-portal ']/div[@class='sc-hHLeRK leJrA-d']/div[1]");
+    By aplicarV = By.xpath("//button[normalize-space()='Aplicar']");
     //By box1 = By.xpath("//div[@class='sc-GVOUr elqapB openx-ui-card-content']");
     //alternativa box1
-    By box1 = By.xpath("//div[@class='sc-GVOUr elqapB openx-ui-card-content']");
-    By primeraCartaH = By.xpath("//body/div[@id='__next']/main[@class='sc-cLFqLo tkAxM']/div[@class='sc-dkdnUF bBaubr list-container']/div[@class='sc-WCkqM dyEyUY']/div[@class='sc-kgUAyh jOSWat']/div[1]/a[1]/div[2]");
+    By box1 = By.xpath("//div[@class='sc-BeQoi bSntmG openx-ui-card-content']");
+    By primeraCartaH = By.xpath("//body/div[@id='__next']/main[@class='sc-cLFqLo tkAxM openx-ui-main-collapsed']/div[@class='sc-dkdnUF bBaubr list-container']/div[@class='sc-WCkqM dyEyUY']/div[@class='sc-hTtwUo dbXSUh']/div[1]/a[1]");
     //
 
     By comentariosH = By.xpath("//span[normalize-space()='Comentarios']");
     By serviciosH = By.xpath("//span[normalize-space()='Servicios']");
-    By serviciowifi = By.xpath("//*[@id=\"amenity-content-INTERNET\"]/div[3]");
+    By serviciowifi = By.xpath("//div[contains(text(),'Wifi gratis')]");
     By despliegueS = By.xpath("//*[@id=\"amenity-INTERNET\"]");
     //Login pendiente only debug
     By miRumbo = By.xpath("//button[@class='display-1kl1c3w-HubNavigationProfile-styled esa6j1t10']//div[@class='display-oht1wq-HubNavigationProfile-styled-HubNavigationProfile-styled esa6j1t7']//*[name()='svg']");
@@ -49,7 +49,7 @@ public class RumboHomePageH extends SeleniumWrapper {
     By hotelesConSpa = By.xpath("//p[contains(text(),'Con las ofertas que hemos seleccionado para ti, cu')]");
     //posiblemente variable
     By hotelespa5es = By.xpath("//span[normalize-space()='Senator Granada Spa']");
-    By habitacionAyD = By.xpath("//body/div[@id='__next']/div[@class='BrandedPageLayout___StyledDiv-sc-1x8t0fu-2 iGBmhN']/section[@id='rooms']/div/div/div/div/div[1]/div[2]/div[1]/div[1]/div[2]/span[1]");
+    By habitacionAyD = By.xpath("//body[1]/div[2]/div[3]/section[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/button[1]");
     By paraOtraPersona = By.xpath("//span[@class='Switchstyles__LabelText-sc-1ym8u79-6 dabJy']");
     By nombreAdicional = By.xpath("//input[@name='groups.1.travellers.1.name']");
     By apellidoAdicional = By.xpath("//input[@name='groups.1.travellers.1.surname']");
@@ -64,11 +64,11 @@ public class RumboHomePageH extends SeleniumWrapper {
     By flexdic22 = By.xpath("//button[@class='display-aycxxj-MonthsRangePicker-styled-MonthsRangePicker-styled']");
 
     By btnEstrellas = By.xpath("//div[@id='container_full_width']//div[3]//div[1]//*[name()='svg']");
-    By checkBox5estrellas = By.xpath("//body/div[@class='sc-dmRaPn goosly custom-overlay-portal ']/div[@class='sc-kgflAQ jwIVQL']/div[1]/div[1]//*[name()='svg'][3]/*[name()='path'][1]");
-    By aplicarEstrellas = By.xpath("//button[@class='sc-fEOsli jzgnBo']");
+    By checkBox5estrellas = By.xpath("//body/div[@class='sc-dIouRR khZjd custom-overlay-portal ']/div[@class='sc-hHLeRK leJrA-d']/div[1]");
+    By aplicarEstrellas = By.xpath("//button[normalize-space()='Aplicar']");
     //Variable dependiendo de la fecha
-    By primerHotel5estrellas = By.xpath("//div[@class='sc-GVOUr dWFxXe openx-ui-card-content']");
-    By primeraOpcionsierra = By.xpath("//span[normalize-space()='Hospes Palacio De Los Patos']");
+    By primerHotel5estrellas = By.xpath("//div[@class='sc-BeQoi gnpnje openx-ui-card-content']");
+    By primeraOpcionsierra = By.xpath("//div[@class='sc-WCkqM dyEyUY']//div[1]//div[3]//a[1]//img[1]");
     By soloAlojamientos = By.id("check_svg__filled");
     By terminosycondiciones = By.xpath("//span[contains(@data-test,'privacyPolicy-check')]");
     By ideasDeDestinos = By.xpath("//div[contains(@class,'display-16pcc9e-HubStickyAdvertProvider-HubStickyAdvertProvider e1re16mz0')]//div[contains(@class,'hub-container mobile e1gf7ux30 display-jkk13v-Container-layouts-HubRow eg3h3jz0')]//div[1]//div[1]//div[3]//button[1]//*[name()='svg']");
@@ -79,13 +79,13 @@ public class RumboHomePageH extends SeleniumWrapper {
     By fechaMadrid31 = By.xpath("//div[normalize-space()='31']");
     By buscarMadrid = By.xpath("//div[@class='btn btn-cta btn-block lmn-sw-submitHotel']");
     By verOtrosHoteles = By.xpath("(//span[@class='BackButton___StyledLink-sc-7wrjfw-3 hfSQhF'])[1]");
-    By todosLosFiltros = By.xpath("//span[normalize-space()='Todos los filtros']");
-    By topSecret = By.xpath("//label[@id='ck_label_tsh']//div[@class='styled__Text-sc-ncpwe6-1 dKelni']");
-    By applyfiltros = By.xpath("//button[@class='sc-jIAOiI gCrpuT']");
+    By todosLosFiltros = By.xpath("//div[@class='sc-gUAEMC iGNGqS active']");
+    By topSecret = By.xpath("(//div[@value='false'])[3]");
+    By applyfiltros = By.xpath("//button[normalize-space()='Aplicar']");
     By variacion5estre = By.xpath("//body/div[@class='sc-bhVIhj ioZiXt custom-overlay-portal ']/div[@class='sc-eGAhfa dMYIUp']/div[1]");
     By apliestre = By.xpath("//button[@class='sc-jIAOiI gCrpuT']");
     //variable por dia
-    By reservatopSecret = By.xpath("(//span[contains(text(),'Hotel 5 estrellas situado en un palacio del siglo ')])[1]");
+    By reservatopSecret = By.xpath("//body/div[@id='__next']/main[@class='sc-cLFqLo tkAxM openx-ui-main-collapsed']/div[@class='sc-dkdnUF bBaubr list-container']/div[@class='sc-WCkqM dyEyUY']/div[@class='sc-hTtwUo dbXSUh']/div[2]/a[1]");
     By habitaciontopS = By.xpath("//body//div[@id='__next']//div[@class='BrandedPageLayout___StyledDiv-sc-1x8t0fu-2 iGBmhN']//div//div//div//div//div[1]//div[2]//div[1]//div[1]//div[1]//ul[1]");
 
 
@@ -245,6 +245,7 @@ public class RumboHomePageH extends SeleniumWrapper {
     }
 
     public void otrovuelos(){
+        waitClick(verOtrosHoteles);
         waitDisplayclick(verOtrosHoteles);
     }
 

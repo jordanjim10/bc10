@@ -117,9 +117,15 @@ public class RumboHomePageV extends SeleniumWrapper {
         waitClick(btnCookiesLoc);
         click(btnCookiesLoc);
     }
+<<<<<<< HEAD:src/test/java/equipo2/funcional/pages/RumboHomePageV.java
     public void pagarViaje2() {
         waitClick(btnSiguiente2Loc);
         click(btnSiguiente2Loc);
+=======
+    public void pagarViaje2(){
+        waitDisplayclick(btnSiguiente2Loc);
+
+>>>>>>> b932ca32982a9580d8df9027dce8d4ccb27f6430:src/test/java/aut/funcional/pages/RumboHomePageV.java
 
     }
     public void agregarPasajero (){
@@ -152,7 +158,8 @@ public class RumboHomePageV extends SeleniumWrapper {
     }
     public void precioNormal(){
         waitClick(precioNormalLoc);
-        click(precioNormalLoc);
+        actionsS(precioNormalLoc);
+       // click(precioNormalLoc);
     }
     public void opcionClassic(){
         waitClick(btnOpcionClassic);

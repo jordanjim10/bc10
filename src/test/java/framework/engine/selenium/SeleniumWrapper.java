@@ -73,18 +73,23 @@ public class SeleniumWrapper {
         driver.navigate().to(url);
 
     }
+<<<<<<< HEAD
+=======
+
+    // Metodos Grupo 2 agregados
+>>>>>>> b932ca32982a9580d8df9027dce8d4ccb27f6430
     public void changeTab() {
         driver.getWindowHandles().forEach(tab -> driver.switchTo().window(tab));
     }
 
 
     public void waitClick(By locator) {
-        WebDriverWait waitme = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebDriverWait waitme = new WebDriverWait(driver, Duration.ofSeconds(25));
         waitme.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
     public void waitDisplayclick(By locator) {
-        WebDriverWait waitD = new WebDriverWait(driver, Duration.ofSeconds(15));
+        WebDriverWait waitD = new WebDriverWait(driver, Duration.ofSeconds(25));
         waitD.until(ExpectedConditions.visibilityOfElementLocated(locator)).click();
     }
 
