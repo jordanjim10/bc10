@@ -23,8 +23,8 @@ public class RBO_0016CM extends SeleniumTestBase {
         rumbo.botonBuscar();
         rumbo.seleccionDestinoC();
         rumbo.rellenarCampos();
-        Assertions.assertEquals("Barcelona - Palma de Mallorca - Palermo - Civitavecchia, Roma - Savona - Marsella - Barcelona",rumbo.textociudades());
+        Assertions.assertEquals("Barcelona - Palma de Mallorca - Palermo - Civitavecchia, Roma - Savona - Marsella - Barcelona", rumbo.textociudades());
         rumbo.screenShotP("Crucero_Barcelona_016");
 
     }
-
+}
