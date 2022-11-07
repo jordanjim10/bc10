@@ -33,8 +33,8 @@ public class RumboHomePageV extends SeleniumWrapper {
     By equisborrar = By.xpath("//div[@aria-label='Clear']//*[name()='svg']");
     By primeraOpcionO = By.xpath("//li[@id='mui-1-option-0']//span[@class='display-1okygcz-Autocompleter-styled']");
     By primeraOpcionD = By.id("mui-2-listbox");
-    By primeraClase = By.xpath("//div[normalize-space()='Primera']//div[contains(@class,'display-1q5nlab-Radio-styled')]");
-    By btnSeccionNormal = By.xpath("//div[@class='trip-collection-view__trips-container-top']//div[@class='FullTripCard__AvailablePricesContainer-sc-z8znd4-6 ciYfDV']");
+    By primeraClase = By.xpath("//form[1]//div[2]//div[4]//div[1]//div[1]//div[1]//div[1]//section[1]//div[1]//div[5]");
+    By btnSeccionNormal = By.xpath("//div[@class='trip-collection-view__trips-container-top']//div[@class='FullTripCard__AvailablePricesContainer-sc-z8znd4-6 bKeGHm']");
     By btnOpcionClassic = By.xpath("//button[@class='Button-sc-1bbve8d-0 jlNCZl']");
     By checkboxAsistenciaE = By.xpath("//label[@data-test='lmn-checkbox']//span[@class='check']");
     By dropAsistencia = By.xpath("//select[@name='REQUEST_TYPE']");
@@ -118,10 +118,8 @@ public class RumboHomePageV extends SeleniumWrapper {
         click(btnCookiesLoc);
     }
     public void pagarViaje2(){
-        waitClick(tarifaSinDsctoLoc);
-        click(tarifaSinDsctoLoc);
         waitDisplayclick(btnSiguiente2Loc);
-        waitDisplayclick(checkTerminosLoc);
+
 
     }
     public void agregarPasajero (){
@@ -154,9 +152,11 @@ public class RumboHomePageV extends SeleniumWrapper {
     }
     public void precioNormal(){
         waitClick(precioNormalLoc);
-        click(precioNormalLoc);
+        actionsS(precioNormalLoc);
+       // click(precioNormalLoc);
     }
     public void opcionClassic(){
+        waitClick(btnOpcionClassic);
         actionsS(btnOpcionClassic);
     }
     public void login () {

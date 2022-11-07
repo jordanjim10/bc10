@@ -80,12 +80,12 @@ public class SeleniumWrapper {
 
 
     public void waitClick(By locator) {
-        WebDriverWait waitme = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebDriverWait waitme = new WebDriverWait(driver, Duration.ofSeconds(25));
         waitme.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
     public void waitDisplayclick(By locator) {
-        WebDriverWait waitD = new WebDriverWait(driver, Duration.ofSeconds(15));
+        WebDriverWait waitD = new WebDriverWait(driver, Duration.ofSeconds(25));
         waitD.until(ExpectedConditions.visibilityOfElementLocated(locator)).click();
     }
 

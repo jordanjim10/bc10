@@ -27,9 +27,9 @@ public class RBO_007HB extends SeleniumTestBase {
         rumbo.box1buscar();
         rumbo.changeTab();
         rumbo.serviciosM();
-        rumbo.despli();
+        //rumbo.despli();
         rumbo.screenShotP("Servicios007");
-        Assertions.assertEquals("WiFi en todo el alojamiento",rumbo.wifiValid());
+        Assertions.assertEquals("Wifi gratis",rumbo.wifiValid());
         rumbo.comentarioshoteles();
         rumbo.screenShotP("Comentarios007");
     }
