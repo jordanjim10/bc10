@@ -69,14 +69,117 @@ public class RumboHomePageV extends SeleniumWrapper {
     By tarifaSinDsctoLoc = By.xpath("//span[@data-test='radio-membershipProposal-STD-custom-radio']//span[@class='check']");
     By btnSiguiente2Loc = By.xpath("//button[normalize-space()='Siguiente']");
     By checkTerminosLoc = By.xpath("//span[@data-test='privacyPolicy-check']");
+    By BtnSoloIda = By.xpath("/html/body/div[1]/div[3]/div/div[2]/div/div/div[5]/div/div/div[2]/div/form/div[1]/div/div[2]");
+    By BtnPrimerVuelo = By.xpath("/html/body/div[6]/div/div/div/div/div[1]/div[2]/div[3]/div[1]/div/div[2]/div[5]/div/section[2]/div/div[1]/div/div/div/div/div[2]/div[1]");
+    By BtnPrimerVuelodos = By.xpath("//div[@class='trip-collection-view__trips-container-top']//div[@class='FullTripCard__SelectedPriceContainer-sc-z8znd4-4 dZEvhO']//div[@class='TripCardPrice__TripCardPriceWrapper-sc-1d8mdrx-2 FiXNf']");
+    By BtnElegirFlexible = By.xpath("/html/body/div[2]/div/div[2]/div/div/div[2]/div[4]/div/div/div/div/div/div/div/div[1]/div[18]/button");
+    By BtnFechaSoloIda = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[3]/div[1]/form[1]/div[1]/div[1]/div[2]");
+    By BtnFechaSiguiente = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/div[3]/div[1]/form[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]/button[2]/*[name()='svg'][1]");
+    By btnDiaFecha = By.xpath("//div[contains(@class,'e19fnmvl0 display-1enws8r-HubRow-withBoxModel-withBoxModel e1gf7ux32')]//div[3]//div[2]//button[18]");
+    By btnBuscar = By.xpath("//button[@type='submit']");
+    By imageTuViaje = By.xpath("//*[@id=\"obe__side\"]/div[2]/div[2]/div[2]");
 
 
+    By soloIdaBtn = By.xpath("(//div[@class='display-1i3exp5-ToggleGroup-ToggleGroup'])[1]");
+    By fechasida = By.xpath("//label[normalize-space()='Fecha de ida']");
+    By nextMonth = By.xpath("//button[contains(@aria-label,'Next month')]//*[name()='svg']");
+    By fechaIdaAbril = By.xpath("(//button[@type='button'][normalize-space()='30'])[2]");
+    By btnSra = By.xpath("//label[@id='radio-groups.1.travellers.1.title-FEMALE-label']//span[@class='check']");
+    By imputNombre = By.xpath("//*[@id=\"contact\"]/form/div[1]/div/div/input");
+    By imputApellido = By.xpath("//*[@id=\"contact\"]/form/div[2]/div/div/input");
+    By imputEmail = By.xpath("//*[@id=\"contact-email\"]");
+    By imputTel = By.xpath("//*[@id=\"contact\"]/form/div[4]/div/div[2]/div/div/div[1]/input");
+    By imputNombredos = By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div[6]/div/div/div[2]/div/div/form/div/div/div[2]/div/div/div/div[2]/div[1]/div/input");
+    By imputApellidodos = By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div[6]/div/div/div[2]/div/div/form/div/div/div[2]/div/div/div/div[3]/div[1]/div/input");
+    By diaNacimiento = By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div[6]/div/div/div[2]/div/div/form/div/div/div[2]/div/div/div/div[4]/div/div/div[1]/input");
+    By mesNacimiento = By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div[6]/div/div/div[2]/div/div/form/div/div/div[2]/div/div/div/div[4]/div/div/div[2]/div/select");
+    By anioNacimiento = By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div[6]/div/div/div[2]/div/div/form/div/div/div[2]/div/div/div/div[4]/div/div/div[3]/input");
+    By clickSiguiente = By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div[10]/div/div/div[2]/button");
+    By clickNoNecesitoEquipaje = By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div[7]/div/div[1]/div/div[4]/div[1]/div/div/label/span[2]");
+    By searchboxTarifa = By.xpath("//*[@id=\"radio-membershipProposal-STD-label\"]/span[1]/span[2]");
+    By searchboxProteccionTotal = By.xpath("//*[@id=\"insurance\"]/div[2]/div[1]/div[3]/div/div[1]/div[1]/div/label/span[2]");
+    By btnElegirAsiento = By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div[7]/div/div/div/div[1]/div/div[2]/div/div[2]/div/button[2]");
+    By imputDirecPostal = By.xpath("//*[@id=\"contact\"]/form/div[5]/div[1]/div/div/div/input");
+    By imputCiudad = By.xpath("//*[@id=\"contact\"]/form/div[6]/div[2]/div/div/div/input");
+    By imputCodPostal = By.xpath("//*[@id=\"contact\"]/form/div[6]/div[1]/div/div/div/input");
+    By numCalle = By.xpath("//*[@id=\"contact\"]/form/div[5]/div[2]/div/div/div/input");
+    By btnSaltar = By.xpath("//*[@id=\"ss-container\"]/div/div[2]/div/div[4]/button");
+    By btnAsiento = By.xpath("//section[2]//div[6]");
+    By btnVueloSinEscalas = By.xpath("//*[@id=\"filters-section--stops__view141\"]/div/div[1]/div/div/div/div[2]/div/label/div/div");
+    By btnViajeMasRapido = By.xpath("//*[@id=\"top-listing-container\"]/div[9]/div/div/ul/li[3]/div[1]");
+    By btnProtegeTuEquipaje = By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div[8]/div/div/div/div[2]/div[1]/div/label/span[2]");
+    By btnSiguiente = By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div[10]/div/div/div[2]/button");
+    By btnTarifaDcto = By.xpath("//*[@id=\"radio-membershipProposal-LASTMINUTE_PLUS-label\"]/span[1]/span[2]");
+    By btnFullFlex = By.xpath("//*[@id=\"insurance\"]/div[2]/div[1]/div[2]/div/div[1]/div[1]/div/label/span[2]");
+    By btnSiguientedos = By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div[11]/div/div/div[2]/button");
+    By textFlexible = By.xpath("//*[@id=\"sticky-summary__body\"]/div[2]/div/div/div[1]/div/div[2]/div");
+    By textProtegeEquipaje = By.xpath("C:\\Users\\blas.uria\\IdeaProjects\\bc10\\src\\test\\java\\aut\\funcional\\pages\\RumboHomePageV.java");
+    By textFullFlex = By.xpath("//*[@id=\"sticky-summary__body\"]/div[2]/div/div/div[3]/div/div[2]/div");
+    By ningunAsiento = By.xpath("//span[@class='passenger--name']");
 
-    // Test 1
+        // Test 1
 
     public void acceptCookie() {
         waitDisplayclick(btnCookiesLoc);
     }
+    public void ningunAsiento(){waitDisplayclick(ningunAsiento);}
+    public void imagenTuViaje(){actionsS(imageTuViaje);}
+    public void  clickSiguientedos(){click(btnSiguientedos);}
+    public void clickFullFlex(){
+        waitClick(btnFullFlex);
+        actionsS(btnFullFlex);
+    }
+    public void clickTarifaDcto(){
+        waitClick(btnTarifaDcto);
+        actionsS(btnTarifaDcto);
+    }
+    public void clickSiguiente(){click(btnSiguiente);}
+    public void clickProtegerEquipaje(){
+        waitClick(btnProtegeTuEquipaje);
+        actionsS(btnProtegeTuEquipaje);
+    }
+    public void clickViajeMasRapido(){
+        waitClick(btnViajeMasRapido);
+        actionsS(btnViajeMasRapido);
+    }
+    public void clickVueloSinEscalas(){
+        waitClick(btnVueloSinEscalas);
+        actionsS(btnVueloSinEscalas);
+    }
+    public void clickAsiento() {waitClick(btnAsiento);}
+    public void clickElegirAsiento() {
+        waitClick(btnElegirAsiento);
+        click(btnElegirAsiento);
+    }
+    public void clickProteccionTotal() {
+        waitClick(searchboxProteccionTotal);
+        actionsS(searchboxProteccionTotal);
+    }
+    public void clickTarifa() {
+        waitClick(searchboxTarifa);
+        actionsS(searchboxTarifa);
+    }
+    public void clickBtnSra(){waitClick(btnSra);}
+    public void clickBuscar(){click(btnBuscar);}
+    public void clickDia() {click(btnDiaFecha);}
+    public void clickFlechaSiguiente (){
+        waitClick(BtnFechaSiguiente);
+        actionsS(BtnFechaSiguiente);}
+
+    public void waitClickElegirFlexible() {
+        waitClick(BtnElegirFlexible);
+        actionsS(BtnElegirFlexible);
+    }
+    public void clickPrimerVuelo() {
+        waitClick(BtnPrimerVuelo);
+        actionsS(BtnPrimerVuelo);
+    }
+    public void clickPrimerVuelodos() {
+        waitClick(BtnPrimerVuelodos);
+        actionsS(BtnPrimerVuelodos);
+    }
+
+    public void clickSoloIda() {actionsS(soloIdaBtn); }
 
     public void clickMenuVuelo() {
         click(btnVuelosLoc);
@@ -111,6 +214,13 @@ public class RumboHomePageV extends SeleniumWrapper {
     public String txtvueloEco() {
         return getText(vueloBaratoTxt);
     }
+    public String textFullFlex() {
+        return getText(textFullFlex);
+    }
+
+    public String textProtegerEquipaje() {
+        return getText(textProtegeEquipaje);
+    }
 
     //Test 2 y 3
     public void acceptarCookies () {
@@ -122,6 +232,47 @@ public class RumboHomePageV extends SeleniumWrapper {
         waitClick(btnSiguiente2Loc);
         click(btnSiguiente2Loc);
 
+    }
+    public void rellenarDatos(){
+        waitClick(imputNombre);
+        write("Blas", imputNombre);
+        write("Uria", imputApellido);
+        write("blasuria@hotmail.com", imputEmail);
+        write("22456528", imputTel);
+        waitDisplayclick(btnSra);
+        write("Blas", imputNombredos);
+        write("Uria", imputApellidodos);
+        write("22", diaNacimiento);
+        click(mesNacimiento);
+        waitDisplayclick(mayoMesLoc);
+        write("1990", anioNacimiento);
+      //  write("7229",imputCodPostal);
+      //  write("7223",imputDirecPostal);
+      //  write("157",numCalle);
+      //  write("La Plata",imputCiudad);
+        waitDisplayclick(clickNoNecesitoEquipaje);
+        waitDisplayclick(clickSiguiente);
+    }
+    public void rellenarDatosdos(){
+        waitClick(imputNombre);
+        write("Blas", imputNombre);
+        write("Uria", imputApellido);
+        write("blasuria@hotmail.com", imputEmail);
+        write("22456528", imputTel);
+        waitDisplayclick(btnSra);
+        write("Blas", imputNombredos);
+        write("Uria", imputApellidodos);
+        write("22", diaNacimiento);
+        click(mesNacimiento);
+        waitDisplayclick(mayoMesLoc);
+        write("1990", anioNacimiento);
+        write("7229",imputCodPostal);
+        write("7223",imputDirecPostal);
+        write("157",numCalle);
+        write("La Plata",imputCiudad);
+       // waitDisplayclick(clickNoNecesitoEquipaje);
+        waitDisplayclick(btnProtegeTuEquipaje);
+        waitDisplayclick(btnSiguiente);
     }
     public void agregarPasajero (){
         write("Sebastian", nombreQuienLoc);
@@ -261,6 +412,27 @@ public class RumboHomePageV extends SeleniumWrapper {
         return getText(asistenciaOp3);
 
     }
+    public String textFlexible(){
+        return getText(textFlexible);
+    }
+    public void btnsoloIda(){
+        click(soloIdaBtn);
+        waitClick(fechasida);
+        click(fechasida);
+        waitDisplayclick(nextMonth);
+        click(nextMonth);
+        click(nextMonth);
+        click(nextMonth);
+        click(nextMonth);
+        click(nextMonth);
+        click(nextMonth);
+        click(nextMonth);
+        click(fechaIdaAbril);
+    }
+
+
+
+
 
 
 

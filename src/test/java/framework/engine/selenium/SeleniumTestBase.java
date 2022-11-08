@@ -21,7 +21,7 @@ public class SeleniumTestBase {
     }
 
     @BeforeEach
-    void webDriverSetup(){
+    void webDriverSetup() {
         String browserName = properties.getProperty("browser");
         driverFactory = new DriverFactory();
         driver = driverFactory.inicializarDriver(browserName);
@@ -33,5 +33,9 @@ public class SeleniumTestBase {
 
         driver.quit();
     }
+<<<<<<< HEAD
 
 }
+=======
+}
+>>>>>>> 46a91ad08242bc0c4a28c473bdbb22ba16409bc8

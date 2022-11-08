@@ -28,3 +28,7 @@ public class RBO_0016CM extends SeleniumTestBase {
 
     }
 }
+<<<<<<< HEAD:src/test/java/equipo2/funcional/testcases/cruceros/RBO_0016CM.java
+=======
+
+>>>>>>> 46a91ad08242bc0c4a28c473bdbb22ba16409bc8:src/test/java/aut/funcional/testcases/cruceros/RBO_0016CM.java
