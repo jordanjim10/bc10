@@ -34,7 +34,10 @@ public class SeleniumTestBase {
         driver.quit();
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 46a91ad08242bc0c4a28c473bdbb22ba16409bc8
 }
 =======
 }
