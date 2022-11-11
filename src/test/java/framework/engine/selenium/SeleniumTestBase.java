@@ -34,5 +34,4 @@ public class SeleniumTestBase {
         driver.quit();
     }
 
-
 }
